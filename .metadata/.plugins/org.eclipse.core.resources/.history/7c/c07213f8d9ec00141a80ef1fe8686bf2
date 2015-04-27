@@ -4,14 +4,13 @@ import interfaces.BarcodePrinter;
 import interfaces.ElectronicLock;
 import interfaces.PinCodeTerminal;
 
+//TODO implement methods specified by course homepage: http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
 
 /**
- * This class have to have certain methods according to the course homepage: http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
  * @author tfy11mj2
- * 
+ *
  */
-public class BicycleGarageManager {//TODO implement methods specified by course homepage: http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
-									//TODO make this class abstract maybe?
+public class BicycleGarageManager {
 
 	/* Register hardware so that BicycleGarageManager
 	 * knows which drivers to access. 

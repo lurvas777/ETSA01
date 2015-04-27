@@ -2,7 +2,7 @@ package interfaces;
 
 import garage.BicycleGarageManager;
 
-public interface PinCodeTerminal {//TODO implement method
+public interface PinCodeTerminal {
 	
 	public static final int RED_LED = 0,
 							GREEN_LED = 1;	
