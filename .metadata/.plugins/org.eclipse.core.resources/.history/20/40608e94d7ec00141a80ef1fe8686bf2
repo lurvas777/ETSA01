@@ -1,9 +1,5 @@
 package garage;
 
-import interfaces.BarcodePrinter;
-import interfaces.ElectronicLock;
-import interfaces.PinCodeTerminal;
-
 public class BicycleGarageManager {
 
 	/* Register hardware so that BicycleGarageManager
