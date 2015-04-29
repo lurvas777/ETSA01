@@ -1,0 +1,18 @@
+package gui;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GUI {
+
+	public GUI() {
+		JFrame frame = new JFrame("GUI for operator");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		
+		frame.pack();
+		frame.setVisible(true);
+	}
+}
