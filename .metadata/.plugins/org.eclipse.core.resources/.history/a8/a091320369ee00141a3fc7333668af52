@@ -1,0 +1,32 @@
+package main;
+
+import testdrivers.BarcodePrinterTestDriver;
+import testdrivers.BarcodeReaderEntryTestDriver;
+import testdrivers.BarcodeReaderExitTestDriver;
+import garage.BicycleGarageManager;
+import gui.GUI;
+
+/**
+ * @author tfy11mj2
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		BicycleGarageManager BGM = new BicycleGarageManager();
+		BarcodePrinterTestDriver BP = new BarcodePrinterTestDriver();
+		BarcodeReaderEntryTestDriver BRE = new BarcodeReaderEntryTestDriver();
+		BarcodeReaderExitTestDriver BREx = new BarcodeReaderExitTestDriver();
+		
+		BRE.register(BGM);
+		BREx.register(BGM);
+		
+		new GUI();
+	}
+
+}

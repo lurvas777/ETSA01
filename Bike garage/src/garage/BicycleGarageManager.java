@@ -38,6 +38,7 @@ public class BicycleGarageManager {//TODO implement methods specified by course 
 	 * @param bicycleID
 	 */
 	public void entryBarcode(String bicycleID) {
+		System.out.println("hello this is dog");
 	}
 
 	/* Will be called when a user has used the bar code
