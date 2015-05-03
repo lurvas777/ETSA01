@@ -5,6 +5,7 @@ import garage.BicycleGarageManager;
 import testdrivers.BarcodePrinterTestDriver;
 import testdrivers.BarcodeReaderEntryTestDriver;
 import testdrivers.BarcodeReaderExitTestDriver;
+import testdrivers.ElectronicLockTestDriver;
 import testdrivers.PinCodeTerminalTestDriver;
 
 /**
@@ -15,21 +16,22 @@ import testdrivers.PinCodeTerminalTestDriver;
 public class Main {
 
 	/**
-	 * Main method. Lunches test drivers and GUI.
+	 * Main method. Lunch test drivers and GUI.
 	 * 
 	 * @param args String array containing arguments. This method does not make any use of the arguments.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		BicycleGarageManager BGM = new BicycleGarageManager();
 		BarcodePrinterTestDriver BP = new BarcodePrinterTestDriver();
-		BarcodeReaderEntryTestDriver BRE = new BarcodeReaderEntryTestDriver();
-		BarcodeReaderExitTestDriver BREx = new BarcodeReaderExitTestDriver();
+		BarcodeReaderEntryTestDriver BRentry = new BarcodeReaderEntryTestDriver();
+		BarcodeReaderExitTestDriver BRexit = new BarcodeReaderExitTestDriver();
 		PinCodeTerminalTestDriver PCT = new PinCodeTerminalTestDriver();
+		ElectronicLockTestDriver ELentry = new ElectronicLockTestDriver("entry");
+		ElectronicLockTestDriver ELexit = new ElectronicLockTestDriver("exit");
 		
-		BRE.register(BGM);
-		BREx.register(BGM);
+		BRentry.register(BGM);
+		BRexit.register(BGM);
 		PCT.register(BGM);
 		
 		GUI gui = new GUI();

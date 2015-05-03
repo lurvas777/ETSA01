@@ -1,5 +1,7 @@
 package operator;
 
+import interfaces.Database;
+
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -14,6 +16,7 @@ import javax.swing.JPanel;
 public class GUI {
 	
 	private JFrame frame;
+	private Database database; //TODO use database
 
 	public GUI() {
 		final JFrame frame = new JFrame("GUI for operator");

@@ -18,7 +18,7 @@ import java.awt.event.*;
  */
 public class ElectronicLockTestDriver implements ElectronicLock {
 	
-	private JLabel state = new JLabel("LOCKED");
+	private JLabel state;
 	private Timer timer;
 	
 	/**
@@ -29,10 +29,13 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 	public ElectronicLockTestDriver(String doorIdentifier) {
 		JFrame frame = new JFrame(doorIdentifier);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		
+		state = new JLabel("LOCKED");
+		
 		JPanel panel = new JPanel();
-		frame.add(panel);
 		panel.add(state);
 		
+		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);
 		
@@ -51,10 +54,10 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 	 *  @param timeOpen time it should be open in seconds.
 	 */
 	public void open(int timeOpen) {
-		state.setText("OPEN");
 		try {
 			timer.setInitialDelay(timeOpen*1000);
 			timer.restart();
+			state.setText("OPEN");
 		} catch (IllegalArgumentException e) {
 			System.err.println("ERROR: IllegalArgumentException in " +
 					"open in ElectronicLockTestDriver");

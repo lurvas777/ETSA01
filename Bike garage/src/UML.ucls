@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="interfaces.BarcodeReader" project="Bike garage" 
+    file="/Bike garage/src/interfaces/BarcodeReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="377" y="91"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="2" language="java" name="interfaces.BarcodePrinter" project="Bike garage" 
+    file="/Bike garage/src/interfaces/BarcodePrinter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1624" y="481"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="interfaces.PinCodeTerminal" project="Bike garage" 
+    file="/Bike garage/src/interfaces/PinCodeTerminal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="207" x="1114" y="441"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" language="java" name="interfaces.Database" project="Bike garage" 
+    file="/Bike garage/src/interfaces/Database.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="644" y="590"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" language="java" name="interfaces.ElectronicLock" project="Bike garage" 
+    file="/Bike garage/src/interfaces/ElectronicLock.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="109" x="1361" y="441"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="testdrivers.BarcodeReaderExitTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/BarcodeReaderExitTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="879" y="265"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="testdrivers.BarcodeReaderEntryTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/BarcodeReaderEntryTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="200" x="515" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="testdrivers.PinCodeTerminalTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/PinCodeTerminalTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="207" x="1114" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="testdrivers.ElectronicLockTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/ElectronicLockTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1424" y="264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="testdrivers.BarcodePrinterTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/BarcodePrinterTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1627" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="testdrivers.BarcodeReaderTestDriver" project="Bike garage" 
+    file="/Bike garage/src/testdrivers/BarcodeReaderTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="207" x="515" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="operator.GUI" project="Bike garage" file="/Bike garage/src/operator/GUI.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1041" y="291"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="main.Main" project="Bike garage" file="/Bike garage/src/main/Main.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="1053" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="database.User" project="Bike garage" file="/Bike garage/src/database/User.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="375" y="591"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="database.SQLDatabase" project="Bike garage" 
+    file="/Bike garage/src/database/SQLDatabase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="187" x="288" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <realization id="18">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="20">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="21">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="22" name="database"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="24">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <realization id="29">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <dependency id="30">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="33">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="false" private="false" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
