@@ -15,19 +15,18 @@ public interface PinCodeTerminal {//TODO implement methods
 	 * terminal knows which manager to call when a user has 
 	 * pressed a key.
 	 * 
-	 * @param manager
+	 * @param manager BicycleGarageManager to register.
 	 */
 	public void register(BicycleGarageManager manager);
 	
 	/** Turn on LED for lightTime seconds.
-	 * Colour: 
-	 * colour = RED_LED = 0 => red 
-	 * colour = GREEN_LED = 1 => green 	
+	 * Color: 
+	 * red color: RED_LED = 0 
+	 * green color: GREEN_LED = 1 	
 	 * 
-	 * @param colour
-	 * @param lightTime
+	 * @param colour Integer, the color specifies the LED light on the terminal which will light up.
+	 * @param lightTime Integer, the time that the LED light will be lit.
 	 */
 	public void lightLED(int colour, int lightTime);
-
 
 }
