@@ -13,11 +13,9 @@ import interfaces.PinCodeTerminal;
 public class BicycleGarageManager {//TODO implement methods specified by course homepage: http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
 									//TODO make this class abstract maybe?
 
-	/* Register hardware so that BicycleGarageManager
+	/** Register hardware so that BicycleGarageManager
 	 * knows which drivers to access. 
-	 */
-	
-	/**
+	 *
 	 * @param printer
 	 * @param entryLock
 	 * @param exitLock
