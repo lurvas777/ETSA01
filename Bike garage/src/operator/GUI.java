@@ -3,17 +3,36 @@ package operator;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ * GUI class for the operator. This class will handle the interaction with the operator and modify the database.
+ * 
+ * @author lurvas
+ */
 public class GUI {
+	
+	private JFrame frame;
 
 	public GUI() {
-		JFrame frame = new JFrame("GUI for operator");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		final JFrame frame = new JFrame("GUI for operator");
+		frame.addWindowListener(new java.awt.event.WindowAdapter() {
+		    @Override
+		    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+		        if (JOptionPane.showConfirmDialog(frame, 
+		            "Are you sure to close the program?", "Close prgram?", 
+		            JOptionPane.YES_NO_OPTION,
+		            JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
+		        	//TODO Termination codes
+		        	//termination code here! Save database and exit in a safe state!
+		            System.exit(0);
+		        }
+		    }
+		});
 		
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		
 		
 		frame.setPreferredSize(new Dimension(200,200));
 		frame.pack();

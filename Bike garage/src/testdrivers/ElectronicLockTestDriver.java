@@ -22,7 +22,8 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 	private Timer timer;
 	
 	/**
-	 * Create an ElectronicLockTestDriver
+	 * Create an ElectronicLockTestDriver that simulates the hardware.
+	 * 
 	 * @param doorIdentifier a string identifying the door, e.g. "entry" or "exit"
 	 */
 	public ElectronicLockTestDriver(String doorIdentifier) {
@@ -45,8 +46,9 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 	}
 
 	/**
-	 *  Open the lock.
-	 *  @param timeOpen time it should be open (s) 
+	 *  Open the lock for the specifyed amount of time.
+	 *  
+	 *  @param timeOpen time it should be open in seconds.
 	 */
 	public void open(int timeOpen) {
 		state.setText("OPEN");

@@ -4,6 +4,7 @@ import garage.BicycleGarageManager;
 import interfaces.BarcodeReader;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -13,11 +14,10 @@ import java.awt.BorderLayout;
 import java.awt.event.*;
 
 /**
- * This is an abstract class representing the common parts for all
- * barcode readers. 
+ * This is an abstract class representing the common parts for all barcode readers. 
  * 
- * @version 1.0
- * @author Martin H�st 
+ * @version 1.1
+ * @author lurvas777
  */
 abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionListener {
 	
@@ -27,7 +27,8 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 	private JButton scanButton;
 	
 	/** 
-	 * Create a BarcodeReaderTestDriver.
+	 * Create a BarcodeReaderTestDriver that simulates the hardware.
+	 * 
 	 * @param windowName text to be written in window frame.
 	 */
 	public BarcodeReaderTestDriver(String windowName) {
@@ -54,6 +55,7 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 	* Register bicycle garage manager so that the bar code
 	* reader knows which manager to call when a user has used 
 	* the reader. 
+	* 
 	* @param manager The bicycle garage manager 
 	*/
 	public void register(BicycleGarageManager manager) {
@@ -64,12 +66,15 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 	 * This abstract method is implemented by subclasses. 
 	 * Subclasses either call the manager�s entryBarcode 
 	 * or exitBarcode.   
+	 * 
 	 * @param code the scanned code. 
 	 */
 	abstract void informManager(String code);
 	
 	/**
 	 * Handles the event that the "scan button" is pressed.
+	 * 
+	 * @param e ActionEvent to be handled.
 	 */
 	public void actionPerformed(ActionEvent e) {
 		String code = scannedCode.getText();

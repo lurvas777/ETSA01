@@ -17,7 +17,7 @@ import javax.swing.Timer;
  * It can be used when BicycleGarageManager is tested.
  * 
  * @version 1.0
- * @author Martin H�st 
+ * @author Martin Host 
  */
 public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListener {
 	
@@ -30,6 +30,7 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 	 * Register bicycle garage manager so that the pin code
 	 * terminal knows which manager to call when a user has 
 	 * pressed a key.
+	 * 
 	 * @param manager The bicycle garage manager
 	 */
 	public void register(BicycleGarageManager manager) {
@@ -37,7 +38,8 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 	}
 
 	/** 
-	 * Turn on LED for lightTime seconds.
+	 * Turn on LED for specifyed amount of seconds.
+	 * 
 	 * @param colour PinCodeTerminal.RED_LED or PinCodeTerminal.GREEN_LED 
 	 * @param lightTime Turn on LED for lightTime seconds
 	 */
@@ -60,7 +62,7 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 	}
 	
 	/** 
-	 * Create a PinCodeTestDriver.
+	 * Create a PinCodeTestDriver that simulates the hardware.
 	 */
 	public PinCodeTerminalTestDriver() {
 		JFrame frame = new JFrame("Pin code terminal");
@@ -105,6 +107,8 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 
 	/** 
 	 * Handles events when a button has been pressed.
+	 * 
+	 * @param e ActionEvent that should be handled.
 	 */
 	public void actionPerformed(ActionEvent e) {
 		String theActionCommand = e.getActionCommand();

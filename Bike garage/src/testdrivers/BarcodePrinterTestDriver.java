@@ -18,7 +18,7 @@ public class BarcodePrinterTestDriver implements BarcodePrinter {
 	private JFrame frame;
 
 	/**
-	 * Create a BarcodePrinterTestDriver
+	 * Create a BarcodePrinterTestDriver that simulates the hardware.
 	 */
 	public BarcodePrinterTestDriver() {
 		frame = new JFrame("Bar code printer");
@@ -34,7 +34,7 @@ public class BarcodePrinterTestDriver implements BarcodePrinter {
 	}
 	
 	/**
-	 * Print a bicycleID as a barcode.
+	 * Print a bicycleID as a barcode. This simulates the hardware.
 	 * @param bicycleID a string of 5 characters, every character can be '0', '1',... '9'. 
 	 */
 	public void printBarcode(String bicycleID) {

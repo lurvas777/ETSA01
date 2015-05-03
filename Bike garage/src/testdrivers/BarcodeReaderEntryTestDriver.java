@@ -11,7 +11,7 @@ package testdrivers;
 public class BarcodeReaderEntryTestDriver extends BarcodeReaderTestDriver {
 	
 	/**
-	 * Construct an instance of BarcodeReaderEntryTestDriver.
+	 * Construct an instance of BarcodeReaderEntryTestDriver that simulates the hardware.
 	 */
 	public BarcodeReaderEntryTestDriver() {
 		super("Entry door barcode reader");
