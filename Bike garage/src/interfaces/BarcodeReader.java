@@ -14,7 +14,7 @@ public interface BarcodeReader {//TODO implement method
 	 * reader knows which manager to call when a user has used 
 	 * the reader. 
 	 * 
-	 * @param manager
+	 * @param manager BicycleGarageManager to register.
 	 */
 	public void register(BicycleGarageManager manager);	
 }
