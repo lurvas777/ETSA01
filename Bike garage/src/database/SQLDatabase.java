@@ -4,6 +4,11 @@ import java.util.List;
 
 import interfaces.Database;
 
+/**
+ * Database that implements the 'Database' interface. Used for storing the users, bikes and other info regarding the users.
+ * 
+ * @author lurvas777
+ */
 public class SQLDatabase implements Database{
 
 	@Override
@@ -37,7 +42,7 @@ public class SQLDatabase implements Database{
 	}
 
 	@Override
-	public List<String> SearchBike(String ID) {
+	public User SearchBike(String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}

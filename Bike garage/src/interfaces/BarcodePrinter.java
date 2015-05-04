@@ -2,8 +2,7 @@ package interfaces;
 
 /**
  * Interface for BarcodePrinter.
- * @author lurvas
- *
+ * @author lurvas777
  */
 public interface BarcodePrinter {//TODO implement method
 	

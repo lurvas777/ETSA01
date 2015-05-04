@@ -1,3 +1,4 @@
+
 package garage;
 
 import interfaces.BarcodePrinter;

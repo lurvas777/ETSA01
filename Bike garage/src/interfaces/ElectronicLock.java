@@ -7,7 +7,8 @@ package interfaces;
  */
 public interface ElectronicLock {//TODO implement method
 	
-	/** Open the lock for timeOpen seconds.
+	/** 
+	 * Open the lock for timeOpen seconds.
 	 * 
 	 * @param timeOpen Integer, the time to open the lock in seconds.
 	 */

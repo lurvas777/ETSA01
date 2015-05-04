@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Self explanatory class. This class is to be used with the database to make handling user information easy.
  * 
- * @author lurvas
+ * @author lurvas777
  */
 public class User {
 
