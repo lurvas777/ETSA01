@@ -5,8 +5,11 @@ import interfaces.ElectronicLock;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.*;
 
 /**
@@ -30,11 +33,13 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 		JFrame frame = new JFrame(doorIdentifier);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		
-		state = new JLabel("LOCKED");
+		state = new JLabel("LOCKED", SwingConstants.CENTER);
 		
 		JPanel panel = new JPanel();
-		panel.add(state);
+		panel.setLayout(new BorderLayout());
+		panel.add(state, BorderLayout.CENTER);
 		
+		frame.setPreferredSize(new Dimension(200,100));
 		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);

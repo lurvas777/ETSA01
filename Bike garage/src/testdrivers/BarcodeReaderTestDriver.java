@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.*;
 
 /**
@@ -39,13 +40,15 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 		panel.setLayout(new BorderLayout());
 		
 		scannedCode = new JTextField(5);
+		scannedCode.setPreferredSize(new Dimension(300,50));
 		panel.add(new JLabel("Scanned code:"), BorderLayout.WEST);
-		panel.add(scannedCode, BorderLayout.EAST);
+		panel.add(scannedCode, BorderLayout.CENTER);
 		
 		scanButton = new JButton("Scan");
 		scanButton.addActionListener(this);
 		panel.add(scanButton, BorderLayout.SOUTH);		
-		
+
+		frame.setPreferredSize(new Dimension(250,100));
 		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);

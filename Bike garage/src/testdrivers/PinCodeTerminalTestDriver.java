@@ -89,6 +89,7 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 			aButton.addActionListener(this);
 			k++;
 		}
+		frame.setPreferredSize(new Dimension(200,300));
 		frame.pack();
 		frame.setVisible(true);
 		redTimer = new Timer(1000, new ActionListener() {

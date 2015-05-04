@@ -1,5 +1,7 @@
 package testdrivers;
 
+import java.awt.Dimension;
+
 import interfaces.BarcodePrinter;
 
 import javax.swing.*;
@@ -28,6 +30,7 @@ public class BarcodePrinterTestDriver implements BarcodePrinter {
 		JScrollPane scrollPane = new JScrollPane(textArea); 
 		textArea.setEditable(false);
 
+		frame.setPreferredSize(new Dimension(300,200));
 		frame.add(scrollPane);
 		frame.pack();
 		frame.setVisible(true);

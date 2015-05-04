@@ -27,9 +27,12 @@ public class GUI {
 		            "Are you sure to close the program?", "Close prgram?", 
 		            JOptionPane.YES_NO_OPTION,
 		            JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
+		        	
 		        	//TODO Termination codes
+		        	//TODO fix so that clicking no does not exit the operator GUI
 		        	//termination code here! Save database and exit in a safe state!
-		            System.exit(0);
+		            
+		        	System.exit(0);
 		        }
 		    }
 		});
@@ -37,7 +40,7 @@ public class GUI {
 		JPanel panel = new JPanel();
 		frame.add(panel);
 		
-		frame.setPreferredSize(new Dimension(200,200));
+		frame.setPreferredSize(new Dimension(800,800));
 		frame.pack();
 		frame.setVisible(true);
 	}
