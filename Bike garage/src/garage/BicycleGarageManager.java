@@ -2,6 +2,8 @@
 package garage;
 
 import interfaces.BarcodePrinter;
+import interfaces.BarcodeReader;
+import interfaces.Database;
 import interfaces.ElectronicLock;
 import interfaces.PinCodeTerminal;
 
@@ -20,8 +22,10 @@ import interfaces.PinCodeTerminal;
 public class BicycleGarageManager {//TODO implement methods specified by course homepage: http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
 
 	private BarcodePrinter printer;
+	private BarcodeReader reader;
 	private ElectronicLock entryLock, exitLock;
 	private PinCodeTerminal terminal;
+	private Database database;
 	
 	/** 
 	 * Register hardware so that the BicycleGarageManager knows which drivers to access. 

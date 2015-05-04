@@ -1,5 +1,6 @@
 package main;
 
+import interfaces.*;
 import operator.GUI;
 import garage.BicycleGarageManager;
 import testdrivers.BarcodePrinterTestDriver;
@@ -23,12 +24,12 @@ public class Main {
 	public static void main(String[] args) {
 		
 		BicycleGarageManager BGM = new BicycleGarageManager();
-		BarcodePrinterTestDriver BP = new BarcodePrinterTestDriver();
-		BarcodeReaderEntryTestDriver BRentry = new BarcodeReaderEntryTestDriver();
-		BarcodeReaderExitTestDriver BRexit = new BarcodeReaderExitTestDriver();
-		PinCodeTerminalTestDriver PCT = new PinCodeTerminalTestDriver();
-		ElectronicLockTestDriver ELentry = new ElectronicLockTestDriver("entry");
-		ElectronicLockTestDriver ELexit = new ElectronicLockTestDriver("exit");
+		BarcodePrinter BP = new BarcodePrinterTestDriver();
+		BarcodeReader BRentry = new BarcodeReaderEntryTestDriver();
+		BarcodeReader BRexit = new BarcodeReaderExitTestDriver();
+		PinCodeTerminal PCT = new PinCodeTerminalTestDriver();
+		ElectronicLock ELentry = new ElectronicLockTestDriver("entry");
+		ElectronicLock ELexit = new ElectronicLockTestDriver("exit");
 		
 		BRentry.register(BGM);
 		BRexit.register(BGM);
