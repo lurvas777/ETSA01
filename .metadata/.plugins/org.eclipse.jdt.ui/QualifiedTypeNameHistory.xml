@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="interfaces.BarcodeReader"/>
-<fullyQualifiedTypeName name="garage.BicycleGarageManager"/>
 <fullyQualifiedTypeName name="interfaces.BarcodePrinter"/>
 <fullyQualifiedTypeName name="interfaces.ElectronicLock"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="gui.GUI"/>
+<fullyQualifiedTypeName name="testdrivers.BarcodePrinterTestDriver"/>
+<fullyQualifiedTypeName name="testdrivers.BarcodeReaderEntryTestDriver"/>
+<fullyQualifiedTypeName name="testdrivers.BarcodeReaderExitTestDriver"/>
+<fullyQualifiedTypeName name="garage.BicycleGarageManager"/>
 <fullyQualifiedTypeName name="interfaces.PinCodeTerminal"/>
+<fullyQualifiedTypeName name="testdrivers.PinCodeTerminalTestDriver"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
 </qualifiedTypeNameHistroy>

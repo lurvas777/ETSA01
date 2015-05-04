@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 /**
  * GUI class for the operator. This class will handle the interaction with the operator and modify the database.
  * 
- * @author lurvas777
+ * @author lurvas
  */
 public class GUI {
 	

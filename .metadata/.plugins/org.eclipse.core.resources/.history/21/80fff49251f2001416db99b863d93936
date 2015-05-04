@@ -11,13 +11,10 @@ public class User {
 
 	private String name, ssn, pin, info;
 	private List<String> bikes;
-	
-	public User(String name, String ssn, String pin, String info, List<String> bikes) {
+	public User(String name, String personalNumber, List<String> bikes) {
 		
 		this.name = name;
-		this.ssn = ssn;
-		this.pin = pin;
-		this.info = info;
+		this.personalNumber = personalNumber;
 		this.bikes = bikes;
 	}
 	
@@ -34,6 +31,20 @@ public class User {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	/**
+	 * @return the personalNumber
+	 */
+	public String getPersonalNumber() {
+		return personalNumber;
+	}
+	
+	/**
+	 * @param personalNumber the personalNumber to set
+	 */
+	public void setPersonalNumber(String personalNumber) {
+		this.personalNumber = personalNumber;
 	}
 	
 	/**
@@ -62,34 +73,6 @@ public class User {
 	 */
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
-	}
-
-	/**
-	 * @return the pin
-	 */
-	public String getPin() {
-		return pin;
-	}
-
-	/**
-	 * @param pin the pin to set
-	 */
-	public void setPin(String pin) {
-		this.pin = pin;
-	}
-
-	/**
-	 * @return the info
-	 */
-	public String getInfo() {
-		return info;
-	}
-
-	/**
-	 * @param info the info to set
-	 */
-	public void setInfo(String info) {
-		this.info = info;
 	}
 	
 }

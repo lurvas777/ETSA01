@@ -7,7 +7,7 @@ import database.User;
 /**
  * Interface for database. The implemented database can be anything, SQL or a simple
  * 
- * @author lurvas777
+ * @author lurvas
  */
 public interface Database {
 
