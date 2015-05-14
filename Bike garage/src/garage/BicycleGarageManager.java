@@ -27,7 +27,7 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 //hej fredrik testar
 	private BarcodePrinter printer;
 	private BarcodeReader reader;
-	private ElectronicLock entryLock, exitLock;
+	private ElectronicLock entryLock, exitLock; // hoho
 	private PinCodeTerminal terminal;
 	private Database database;
 
