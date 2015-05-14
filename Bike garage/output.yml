@@ -1,0 +1,14 @@
+!database.User
+name: bajs
+bikes: &1
+- bike1
+- bike2
+info: 456
+pin: 123
+ssn: sevensson
+--- !database.User
+name: adsf
+bikes: *1
+info: 456
+pin: 123
+ssn: sevensson
