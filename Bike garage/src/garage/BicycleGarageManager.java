@@ -87,7 +87,9 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            following: '0', '1',... '9', '*', '#'.
 	 */
 public void stuff(){
+	//sasd
 }
+
 
 
 }
