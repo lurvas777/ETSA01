@@ -1,0 +1,78 @@
+package database;
+
+import java.util.List;
+
+/**
+ * Self explanatory class. This class is to be used with the database to make handling user information easy.
+ * 
+ * @author lurvas
+ */
+public class User {
+
+	private String name, ssn, pin, info;
+	private List<String> bikes;
+	public User(String name, String personalNumber, List<String> bikes) {
+		
+		this.name = name;
+		this.personalNumber = personalNumber;
+		this.bikes = bikes;
+	}
+	
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+		
+	}
+	
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	/**
+	 * @return the personalNumber
+	 */
+	public String getPersonalNumber() {
+		return personalNumber;
+	}
+	
+	/**
+	 * @param personalNumber the personalNumber to set
+	 */
+	public void setPersonalNumber(String personalNumber) {
+		this.personalNumber = personalNumber;
+	}
+	
+	/**
+	 * @return the bikes
+	 */
+	public List<String> getBikes() {
+		return bikes;
+	}
+	
+	/**
+	 * @param bikes the bikes to set
+	 */
+	public void setBikes(List<String> bikes) {
+		this.bikes = bikes;
+	}
+
+	/**
+	 * @return the ssn
+	 */
+	public String getSsn() {
+		return ssn;
+	}
+
+	/**
+	 * @param ssn the ssn to set
+	 */
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
+	}
+	
+}

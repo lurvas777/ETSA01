@@ -5,8 +5,10 @@ package garage;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import database.Bike;
+import database.DBWriter;
+import database.User;
 import logger.Logger;
-
 import interfaces.BarcodePrinter;
 import interfaces.BarcodeReader;
 import interfaces.Database;
@@ -35,7 +37,7 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	private BarcodeReader entryReader, exitReader;
 	private ElectronicLock entryLock, exitLock;
 	private PinCodeTerminal terminal;
-	private Database database;
+	private DBWriter database;
 	private ArrayList<Character> characterHistory;
 	private static final int DOOR_OPEN_TIME = 10;
 	private static final int PINCODE_LENGTH = 5;
@@ -43,10 +45,11 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	
 	private Logger userLogger;
 	
-	public BicycleGarageManager(int garagePid) {
+	public BicycleGarageManager(int garagePid, DBWriter database) {
 		characterHistory = new ArrayList<Character>();
 		this.garagePid = garagePid;
 		userLogger = new Logger("testlog2.txt");
+		this.database = database;
 	}
 	
 	/** 
@@ -83,6 +86,8 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            String representing the ID for a bicycle
 	 */
 	public void entryBarcode(String bicycleID) {
+		Bike b = database.SearchBike(bicycleID);
+
 	}
 
 	/**
@@ -113,22 +118,31 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 			}
 			
 			Iterator<Character> it = characterHistory.iterator();
-			StringBuilder pin = new StringBuilder();
+
+			StringBuilder pinSB = new StringBuilder();
 
 			while(it.hasNext()) {
-			    pin.append(it.next());
+			    pinSB.append(it.next());
 			}
-			//System.out.println("pin entered: "+pin);
-			//if (database.canOpenGarageDoor(garagePid,pin)) {
-			if (true) {
-				//System.out.println("opening door...");
-				
-				userLogger.log("door opened with pin "+pin);
-				entryLock.open(DOOR_OPEN_TIME);
-				// Blink green LED
-			} else {
-				// Blink red LED
+			
+			String pin = pinSB.toString();
+			
+			User u = database.SearchUserPin(pin);
+			if (u == null) return;
+			
+			for (Bike b : u.getBikes()) {
+				if (b.isParkedInGarage(garagePid)) {
+					userLogger.log("door opened with pin "+pin);
+					entryLock.open(DOOR_OPEN_TIME);
+					// Blink green LED
+					
+					characterHistory.clear();
+					return;
+				}
 			}
+			
+			// Blink red LED
+
 			characterHistory.clear();
 		} else if (c != '*') {
 			if (characterHistory.size() < PINCODE_LENGTH) {

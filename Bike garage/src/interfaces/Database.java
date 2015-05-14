@@ -2,6 +2,10 @@ package interfaces;
 
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import database.Bike;
+>>>>>>> 79dcf206b2fea35b57fcbfa20cc88ecacd075541
 import database.User;
 
 /**
@@ -47,12 +51,18 @@ public interface Database {
 	 * @param name String containing the name of the user in the database.
 	 * @return User object containing the User. If non is found, null is returned.
 	 */
-	public User SearchUser(String name);
+	public User SearchUserName(String name);
+	
+	public User SearchUserPin(String pin);
+	
+	public User SearchUserSSN(String ssn);
+	
+	
 	
 	/**
 	 * @param ID String containing the ID of the bike, 
 	 * @return User that has the bike ID registered in the database. If non is found, null is returned.
 	 */
-	public User SearchBike(String ID);
+	public Bike SearchBike(String ID);
 	
 }

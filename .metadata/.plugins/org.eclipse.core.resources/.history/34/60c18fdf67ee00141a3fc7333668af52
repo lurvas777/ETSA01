@@ -1,0 +1,12 @@
+package gui;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GUI {
+
+	public GUI() {
+		JFrame frame = new JFrame("GUI for operator");
+		JPanel panel = new JPanel();
+	}
+}

@@ -1,0 +1,72 @@
+package testdrivers;
+
+import interfaces.ElectronicLock;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.Timer;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.event.*;
+
+/**
+ * This class simulates an electronic lock. 
+ * It can be used when BicycleGarageManager is tested.
+ * 
+ * @version 1.1
+ * @author Martin Host 
+ */
+public class ElectronicLockTestDriver implements ElectronicLock {
+	
+	private JLabel state;
+	private Timer timer;
+	
+	/**
+	 * Create an ElectronicLockTestDriver that simulates the hardware.
+	 * 
+	 * @param doorIdentifier a string identifying the door, e.g. "entry" or "exit"
+	 */
+	public ElectronicLockTestDriver(String doorIdentifier) {
+		JFrame frame = new JFrame(doorIdentifier);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		
+		state = new JLabel("LOCKED");
+		
+		JPanel panel = new JPanel();
+		panel.add(state);
+		
+
+		panel.setLayout(new BorderLayout());
+		
+		frame.setPreferredSize(new Dimension(200,100));
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
+		
+		timer = new Timer(1000, new ActionListener() {
+			public void actionPerformed(ActionEvent e) {  	// Inner class with code
+				state.setText("LOCKED");					// to be executed when the timer
+				timer.stop();								// event happens
+			}
+		});
+		timer.stop();
+	}
+
+	/**
+	 *  Open the lock for the specifyed amount of time.
+	 *  
+	 *  @param timeOpen time it should be open in seconds.
+	 */
+	public void open(int timeOpen) {
+		try {
+			timer.setInitialDelay(timeOpen*1000);
+			timer.restart();
+			state.setText("OPEN");
+		} catch (IllegalArgumentException e) {
+			System.err.println("ERROR: IllegalArgumentException in " +
+					"open in ElectronicLockTestDriver");
+		}
+	}
+}

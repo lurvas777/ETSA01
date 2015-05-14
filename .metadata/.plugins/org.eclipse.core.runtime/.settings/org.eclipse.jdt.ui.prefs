@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+Refactoring.savealleditors=true
+command=/usr/lib/jvm/java-7-openjdk-amd64/bin/javadoc
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javax.swing.WindowConstants"><rhs name\="javax.swing.JFrame"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="javax.swing.RootPaneContainer"><rhs name\="javax.swing.JFrame"/></lhs><lhs name\="javax.swing.TransferHandler$HasGetTransferHandler"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="java.awt.Frame"><rhs name\="javax.swing.JFrame"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="java.awt.Window"><rhs name\="javax.swing.JFrame"/></lhs><lhs name\="java.awt.Container"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="java.awt.Component"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="javax.swing.JFrame"/><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="javax.swing.JFrame"><rhs name\="javax.swing.JFrame"/></lhs><lhs name\="javax.swing.JComponent"><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="javax.swing.JPanel"><rhs name\="javax.swing.JPanel"/></lhs><lhs name\="garage.BicycleGarageManager"><rhs name\="garage.BicycleGarageManager"/></lhs><lhs name\="interfaces.BarcodePrinter"><rhs name\="testdrivers.BarcodePrinterTestDriver"/></lhs><lhs name\="testdrivers.BarcodePrinterTestDriver"><rhs name\="testdrivers.BarcodePrinterTestDriver"/></lhs><lhs name\="testdrivers.BarcodeReaderTestDriver"><rhs name\="testdrivers.BarcodeReaderEntryTestDriver"/><rhs name\="testdrivers.BarcodeReaderExitTestDriver"/></lhs><lhs name\="interfaces.BarcodeReader"><rhs name\="testdrivers.BarcodeReaderEntryTestDriver"/><rhs name\="testdrivers.BarcodeReaderExitTestDriver"/></lhs><lhs name\="java.awt.event.ActionListener"><rhs name\="testdrivers.BarcodeReaderEntryTestDriver"/><rhs name\="testdrivers.BarcodeReaderExitTestDriver"/><rhs name\="testdrivers.PinCodeTerminalTestDriver"/></lhs><lhs name\="java.util.EventListener"><rhs name\="testdrivers.BarcodeReaderEntryTestDriver"/><rhs name\="testdrivers.BarcodeReaderExitTestDriver"/><rhs name\="testdrivers.PinCodeTerminalTestDriver"/></lhs><lhs name\="testdrivers.BarcodeReaderEntryTestDriver"><rhs name\="testdrivers.BarcodeReaderEntryTestDriver"/></lhs><lhs name\="testdrivers.BarcodeReaderExitTestDriver"><rhs name\="testdrivers.BarcodeReaderExitTestDriver"/></lhs><lhs name\="interfaces.PinCodeTerminal"><rhs name\="testdrivers.PinCodeTerminalTestDriver"/></lhs><lhs name\="testdrivers.PinCodeTerminalTestDriver"><rhs name\="testdrivers.PinCodeTerminalTestDriver"/></lhs><lhs name\="java.awt.geom.Dimension2D"><rhs name\="java.awt.Dimension"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.awt.Dimension"/></lhs><lhs name\="java.awt.Dimension"><rhs name\="java.awt.Dimension"/></lhs></history>
+>>>>>>> 79dcf206b2fea35b57fcbfa20cc88ecacd075541
 content_assist_number_of_computers=13
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=26,26,26
@@ -6,6 +12,13 @@ fontPropagated=true
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.ui.javadoclocations.migrated=true
+<<<<<<< HEAD
+=======
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+>>>>>>> 79dcf206b2fea35b57fcbfa20cc88ecacd075541
 org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
 proposalOrderMigrated=true
 spelling_locale_initialized=true
