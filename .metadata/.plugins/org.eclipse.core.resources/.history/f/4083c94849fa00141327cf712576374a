@@ -25,12 +25,11 @@ public class DBWriter implements Database {
 	}
 	
 	public static void write() throws IOException{
-		/*
 		List<String> list = new ArrayList<String>();
 		list.add("bike1");
 		User user = new User("bajs", "sevensson", "123", "456", list);
 		
-		
+
 		list.add("bike2");
 		User user2 = new User("adsf", "sevensson", "123", "456", list);
 		
@@ -50,7 +49,7 @@ public class DBWriter implements Database {
 		
 		Object object2 = reader.read();
 		User temp2 = (User)object2;
-		System.out.println(temp2.getName());*/
+		System.out.println(temp2.getName());
 
 	}
 

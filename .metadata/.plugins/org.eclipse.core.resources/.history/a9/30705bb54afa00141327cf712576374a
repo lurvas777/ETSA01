@@ -5,7 +5,6 @@ package garage;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import database.Bike;
 import database.DBWriter;
 import database.User;
 import logger.Logger;
@@ -128,18 +127,23 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 			if (u == null) return;
 			
 			for (Bike b : u.getBikes()) {
-				if (b.isParkedInGarage(garagePid)) {
-					userLogger.log("door opened with pin "+pin);
-					entryLock.open(DOOR_OPEN_TIME);
-					// Blink green LED
-					
-					characterHistory.clear();
-					return;
-				}
+				
 			}
 			
-			// Blink red LED
 			
+			//System.out.println("pin entered: "+pin);
+			//if (database.canOpenGarageDoor(garagePid,pin)) {
+			if (true) {
+				//System.out.println("opening door...");
+				
+				
+				
+				userLogger.log("door opened with pin "+pin);
+				entryLock.open(DOOR_OPEN_TIME);
+				// Blink green LED
+			} else {
+				// Blink red LED
+			}
 			characterHistory.clear();
 		} else if (c != '*') {
 			if (characterHistory.size() < PINCODE_LENGTH) {

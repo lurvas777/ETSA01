@@ -27,7 +27,7 @@ public class Logger {
 			
 			pw.println(strDate+": "+msg);
 			pw.close();
-			//System.out.println("försöker logga");
+			System.out.println("försöker logga");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

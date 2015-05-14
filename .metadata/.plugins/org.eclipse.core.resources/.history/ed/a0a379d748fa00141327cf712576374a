@@ -47,13 +47,7 @@ public interface Database {
 	 * @param name String containing the name of the user in the database.
 	 * @return User object containing the User. If non is found, null is returned.
 	 */
-	public User SearchUserName(String name);
-	
-	public User SearchUserPin(String pin);
-	
-	public User SearchUserSSN(String ssn);
-	
-	
+	public User SearchUser(String name);
 	
 	/**
 	 * @param ID String containing the ID of the bike, 

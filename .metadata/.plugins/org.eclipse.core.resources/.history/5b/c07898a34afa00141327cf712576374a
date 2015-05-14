@@ -10,11 +10,11 @@ import java.util.List;
 public class User {
 
 	private String name, ssn, pin, info;
-	private List<Bike> bikes;
+	private List<String> bikes;
 	
 	public User(){}
 	
-	public User(String name, String ssn, String pin, String info, List<Bike> bikes) {
+	public User(String name, String ssn, String pin, String info, List<String> bikes) {
 		
 		this.name = name;
 		this.ssn = ssn;
@@ -41,14 +41,14 @@ public class User {
 	/**
 	 * @return the bikes
 	 */
-	public List<Bike> getBikes() {
+	public List<String> getBikes() {
 		return bikes;
 	}
 	
 	/**
 	 * @param bikes the bikes to set
 	 */
-	public void setBikes(List<Bike> bikes) {
+	public void setBikes(List<String> bikes) {
 		this.bikes = bikes;
 	}
 

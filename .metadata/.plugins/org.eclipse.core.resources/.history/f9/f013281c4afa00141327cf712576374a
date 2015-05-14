@@ -27,8 +27,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		DBWriter database = new DBWriter();
-		BicycleGarageManager BGM = new BicycleGarageManager(0,database);
+		BicycleGarageManager BGM = new BicycleGarageManager(0);
 		BarcodePrinter BP = new BarcodePrinterTestDriver();
 		BarcodeReader BRentry = new BarcodeReaderEntryTestDriver();
 		BarcodeReader BRexit = new BarcodeReaderExitTestDriver();
@@ -44,9 +43,6 @@ public class Main {
 		
 
 		BGM.registerHardwareDrivers(BP,ELentry,ELexit,PCT,BRentry, BRexit);
-		
-		
-		
 		
 		try {
 			DBWriter.write();
