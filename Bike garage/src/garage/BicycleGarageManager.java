@@ -86,6 +86,8 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            Char that was entered. This car can be anything of the
 	 *            following: '0', '1',... '9', '*', '#'.
 	 */
-	public 
-
+	public void entryCharacter(char c) {
+		// Test
+		//2
+	}
 }
