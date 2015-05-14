@@ -87,8 +87,7 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            following: '0', '1',... '9', '*', '#'.
 	 */
 	public void entryCharacter(char c) {
-		// Test
-		//2
+
 	}
 
 }
