@@ -12,5 +12,8 @@
 <fullyQualifiedTypeName name="garage.BicycleGarageManager"/>
 <fullyQualifiedTypeName name="interfaces.PinCodeTerminal"/>
 <fullyQualifiedTypeName name="testdrivers.PinCodeTerminalTestDriver"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
 </qualifiedTypeNameHistroy>
