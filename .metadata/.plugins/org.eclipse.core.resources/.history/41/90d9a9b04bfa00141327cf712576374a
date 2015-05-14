@@ -17,12 +17,10 @@ import java.util.List;
 public class DBWriter implements Database {
 	
 	private HashMap<String,User> users;
-	private HashMap<String,Bike> bikes;
 	
 	public DBWriter() {
 		// Load from txt file
 		users = new HashMap<String,User>();
-		bikes = new HashMap<String,Bike>();
 		// ...
 	}
 	
@@ -81,7 +79,7 @@ public class DBWriter implements Database {
 	}
 
 	@Override
-	public Bike SearchBike(String ID) {
+	public User SearchBike(String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}

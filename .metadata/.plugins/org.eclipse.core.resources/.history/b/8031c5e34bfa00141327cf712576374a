@@ -81,7 +81,7 @@ public class DBWriter implements Database {
 	}
 
 	@Override
-	public Bike SearchBike(String ID) {
+	public User SearchBike(String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
