@@ -63,7 +63,6 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            String representing the ID for a bicycle
 	 */
 	public void entryBarcode(String bicycleID) {
-		//hoho asdf
 	}
 
 	/**
@@ -87,7 +86,6 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            following: '0', '1',... '9', '*', '#'.
 	 */
 	public void entryCharacter(char c) {
-		// Test
-		//2
 	}
+	//jhea
 }
