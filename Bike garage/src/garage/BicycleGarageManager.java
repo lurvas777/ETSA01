@@ -1,5 +1,10 @@
 package garage;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import logger.Logger;
+
 import interfaces.BarcodePrinter;
 import interfaces.BarcodeReader;
 import interfaces.Database;
@@ -24,16 +29,26 @@ import interfaces.PinCodeTerminal;
 public class BicycleGarageManager {// TODO implement methods specified by course
 									// homepage:
 									// http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
-	
 	private BarcodePrinter printer;
-	private BarcodeReader reader;
+	private BarcodeReader entryReader, exitReader;
 	private ElectronicLock entryLock, exitLock;
 	private PinCodeTerminal terminal;
 	private Database database;
-
-	/**
-	 * Register hardware so that the BicycleGarageManager knows which drivers to
-	 * access.
+	private ArrayList<Character> characterHistory;
+	private static final int DOOR_OPEN_TIME = 10;
+	private static final int PINCODE_LENGTH = 5;
+	private int garagePid;
+	
+	private Logger userLogger;
+	
+	public BicycleGarageManager(int garagePid) {
+		characterHistory = new ArrayList<Character>();
+		this.garagePid = garagePid;
+		userLogger = new Logger("testlog2.txt");
+	}
+	
+	/** 
+	 * Register hardware so that the BicycleGarageManager knows which drivers to access. 
 	 *
 	 * @param printer
 	 *            BarcodePrinter that should be registered.
@@ -45,13 +60,16 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            PinCodeTerminal for the entry door.
 	 */
 	public void registerHardwareDrivers(BarcodePrinter printer,
-			ElectronicLock entryLock, ElectronicLock exitLock,
-			PinCodeTerminal terminal) {
+	     ElectronicLock entryLock, ElectronicLock exitLock,
+	     PinCodeTerminal terminal, BarcodeReader entryReader,
+	     BarcodeReader exitReader) {
 
 		this.printer = printer;
 		this.entryLock = entryLock;
 		this.exitLock = exitLock;
 		this.terminal = terminal;
+		this.entryReader = entryReader;
+		this.exitReader = exitReader;
 	}
 
 	/**
@@ -85,7 +103,38 @@ public class BicycleGarageManager {// TODO implement methods specified by course
 	 *            Char that was entered. This car can be anything of the
 	 *            following: '0', '1',... '9', '*', '#'.
 	 */
-	public void entryString(String cesar) {
+	public void entryCharacter(char c) {
+		if (c == '#') {
+			if (characterHistory.size() != PINCODE_LENGTH) {
+				characterHistory.clear();
+				return;
+			}
+			
+			Iterator<Character> it = characterHistory.iterator();
+			StringBuilder pin = new StringBuilder();
+
+			while(it.hasNext()) {
+			    pin.append(it.next());
+			}
+			//System.out.println("pin entered: "+pin);
+			//if (database.canOpenGarageDoor(garagePid,pin)) {
+			if (true) {
+				//System.out.println("opening door...");
+				
+				userLogger.log("door opened with pin "+pin);
+				entryLock.open(DOOR_OPEN_TIME);
+				// Blink green LED
+			} else {
+				// Blink red LED
+			}
+			characterHistory.clear();
+		} else if (c != '*') {
+			if (characterHistory.size() < PINCODE_LENGTH) {
+				characterHistory.add(c);
+			} else {
+				characterHistory.remove(0);
+				characterHistory.add(c);
+			}
+		}
 	}
-	//jhea
 }

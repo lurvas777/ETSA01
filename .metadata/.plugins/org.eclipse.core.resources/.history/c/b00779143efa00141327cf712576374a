@@ -1,0 +1,20 @@
+package database;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DBWriter {
+	
+	public void write(){
+		List<String> list = new ArrayList<String>();
+		list.add("asdf");
+		User user = new User("asdf", "asdf", "asdf", "asdf", list);
+		
+		YamlWriter writer = new YamlWriter(new FileWriter("output.yml"));
+
+
+		writer.write(contact);
+
+		writer.close();
+	}
+}

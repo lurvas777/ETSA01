@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;database.Writer&apos; to &apos;DBWriter&apos;&#x0A;- Original project: &apos;Bike garage&apos;&#x0A;- Original element: &apos;database.Writer&apos;&#x0A;- Renamed element: &apos;database.DBWriter&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Writer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;database{Writer.java[Writer" matchStrategy="1" name="DBWriter" qualified="false" references="true" similarDeclarations="false" stamp="1431610284628" textual="false" version="1.0"/>
+</session>

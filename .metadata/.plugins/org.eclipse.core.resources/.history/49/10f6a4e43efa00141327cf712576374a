@@ -1,0 +1,39 @@
+package database;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.esotericsoftware.yamlbeans.YamlReader;
+import com.esotericsoftware.yamlbeans.YamlWriter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class DBWriter {
+	
+	public static void write() throws IOException{
+		List<String> list = new ArrayList<String>();
+		list.add("bike1");
+		list.add("bike2");
+		User user = new User("sven", "sevensson", "123", "456", list);
+		
+		YamlWriter writer = new YamlWriter(new FileWriter("output.yml"));
+
+		writer.getConfig().setPrivateFields(true);
+		writer.write(user);
+
+		writer.close();
+		
+		YamlReader reader = new YamlReader(new FileReader("map.yml"));
+
+
+		Object object = reader.read();
+
+
+		User temp = (User)object;
+		System.out.println(user.getName());
+		
+	}
+}

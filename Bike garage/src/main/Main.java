@@ -1,5 +1,9 @@
 package main;
 
+import java.io.IOException;
+import java.io.Writer;
+
+import database.DBWriter;
 import interfaces.*;
 import operator.GUI;
 import garage.BicycleGarageManager;
@@ -23,7 +27,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		BicycleGarageManager BGM = new BicycleGarageManager();
+		BicycleGarageManager BGM = new BicycleGarageManager(0);
 		BarcodePrinter BP = new BarcodePrinterTestDriver();
 		BarcodeReader BRentry = new BarcodeReaderEntryTestDriver();
 		BarcodeReader BRexit = new BarcodeReaderExitTestDriver();
@@ -36,6 +40,16 @@ public class Main {
 		PCT.register(BGM);
 		
 		GUI gui = new GUI();
+		
+
+		BGM.registerHardwareDrivers(BP,ELentry,ELexit,PCT,BRentry, BRexit);
+		
+		try {
+			DBWriter.write();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

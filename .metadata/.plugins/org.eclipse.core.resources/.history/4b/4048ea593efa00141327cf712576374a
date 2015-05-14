@@ -1,0 +1,48 @@
+package main;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import database.DBWriter;
+import interfaces.*;
+import operator.GUI;
+import garage.BicycleGarageManager;
+import testdrivers.BarcodePrinterTestDriver;
+import testdrivers.BarcodeReaderEntryTestDriver;
+import testdrivers.BarcodeReaderExitTestDriver;
+import testdrivers.ElectronicLockTestDriver;
+import testdrivers.PinCodeTerminalTestDriver;
+
+/**
+ * Class containing the main method for this project. This will lunch some test drivers, simulating the hardware, and a GUI for the operator.
+ * 
+ * @author tfy11mj2
+ */
+public class Main {
+
+	/**
+	 * Main method. Lunch test drivers and GUI.
+	 * 
+	 * @param args String array containing arguments. This method does not make any use of the arguments.
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		
+		BicycleGarageManager BGM = new BicycleGarageManager();
+		BarcodePrinter BP = new BarcodePrinterTestDriver();
+		BarcodeReader BRentry = new BarcodeReaderEntryTestDriver();
+		BarcodeReader BRexit = new BarcodeReaderExitTestDriver();
+		PinCodeTerminal PCT = new PinCodeTerminalTestDriver();
+		ElectronicLock ELentry = new ElectronicLockTestDriver("entry");
+		ElectronicLock ELexit = new ElectronicLockTestDriver("exit");
+		
+		BRentry.register(BGM);
+		BRexit.register(BGM);
+		PCT.register(BGM);
+		
+		GUI gui = new GUI();
+		
+		DBWriter.write();
+	}
+
+}

@@ -12,6 +12,8 @@ public class User {
 	private String name, ssn, pin, info;
 	private List<String> bikes;
 	
+	public User(){}
+	
 	public User(String name, String ssn, String pin, String info, List<String> bikes) {
 		
 		this.name = name;

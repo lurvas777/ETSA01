@@ -1,0 +1,11 @@
+package database;
+
+import java.awt.List;
+
+public class DBWriter {
+	
+	public void write(){
+		List<String> list = new List<String>();
+		User user = new User("asdf", "asdf", "asdf", "asdf", list);
+	}
+}
