@@ -24,7 +24,7 @@ import interfaces.PinCodeTerminal;
 public class BicycleGarageManager {// TODO implement methods specified by course
 									// homepage:
 									// http://cs.lth.se/etsa01/projekt-2015/specifikation-av-mjukvaran/
-
+//asdfasdf
 	private BarcodePrinter printer;
 	private BarcodeReader reader;
 	private ElectronicLock entryLock, exitLock; // hoho
